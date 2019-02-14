@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>博客用命令</title>
+<meta name="Keywords" content="" >
+<meta name="Description" content="" >
+<link href="css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <h1><a href="">花气袭人是酒香</a></h1>
+  <p>这夏天里流动的风情，是停不住的舞步和唱不完的情歌，当玫瑰花瓣飘飞的那一刻，风会带走所有的想念.......</p>
+</header>
+<div class="navswf">
+<object id="customMenu" data="images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+<div id="nav">
+     <ul>
+       <li><a href="../index.html" >网站首页</a></li>
+        <li><a href="../manShenhuo/manShenhuo.html"title="慢生活">慢生活</a></li>
+        <li><a href="../technology/technology.html"title="技术探讨">技术探讨</a></li>
+        <li><a href="../webMoban/webMoban.html"title="个人网站模板">网站模板</a></li>
+        <li><a href="../newstalk/newstalk.html" target="" title="碎言碎语">碎言碎语</a></li>
+       <li><a href="../liuYanban/liuYanban.html"title="留言版">留言版</a></li>
+     </ul>
+     <script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+</div>
+</div>
+<div class="blank"></div>
+<article>
+<div class="content"> 
+    <div class="bloglist">
+  <!--article begin-->
+    <ul>
+		<h1>Eureka客户端配置&nbsp; &nbsp; &nbsp;</h1>
+<p>1、RegistryFetchIntervalSeconds&mdash;&mdash;从eureka服务器注册表中获取注册信息的时间间隔（s），默认为30秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 2、InstanceInfoReplicationIntervalSeconds&mdash;&mdash; 复制实例变化信息到eureka服务器所需要的时间间隔（s），默认为30秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 3、InitialInstanceInfoReplicationIntervalSeconds&mdash;&mdash;最初复制实例信息到eureka服务器所需的时间（s），默认为40秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 4、EurekaServiceUrlPollIntervalSeconds&mdash;&mdash;询问Eureka服务url信息变化的时间间隔（s），默认为300秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 5、ProxyHost&mdash;&mdash;获取eureka服务的代理主机，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 6、ProxyProxyPort&mdash;&mdash;获取eureka服务的代理端口, 默认为null&nbsp;<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 7、ProxyUserName&mdash;&mdash;获取eureka服务的代理用户名，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 8、ProxyPassword&mdash;&mdash;获取eureka服务的代理密码，默认为null&nbsp;<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 9、GZipContent&mdash;&mdash;eureka注册表的内容是否被压缩，默认为true，并且是在最好的网络流量下被压缩<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 10、EurekaServerReadTimeoutSeconds&mdash;&mdash;eureka需要超时读取之前需要等待的时间，默认为8秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 11、EurekaServerConnectTimeoutSeconds&mdash;&mdash;eureka需要超时连接之前需要等待的时间，默认为5秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 12、BackupRegistryImpl&mdash;&mdash;获取实现了eureka客户端在第一次启动时读取注册表的信息作为回退选项的实现名称<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; 13、EurekaServerTotalConnections&mdash;&mdash;eureka客户端允许所有eureka服务器连接的总数目，默认是200<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;14、EurekaServerTotalConnectionsPerHost&mdash;&mdash;eureka客户端允许eureka服务器主机连接的总数目，默认是50<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;15、EurekaServerURLContext&mdash;&mdash;表示eureka注册中心的路径，如果配置为eureka，则为http://x.x.x.x:x/eureka/，在eureka的配置文件中加入此配置表示eureka作为客户端向注册中心注册，从而构成eureka集群。此配置只有在eureka服务器ip地址列表是在DNS中才会用到，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;16、EurekaServerPort&mdash;&mdash;获取eureka服务器的端口，此配置只有在eureka服务器ip地址列表是在DNS中才会用到。默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;17、EurekaServerDNSName&mdash;&mdash;获取要查询的DNS名称来获得eureka服务器，此配置只有在eureka服务器ip地址列表是在DNS中才会用到。默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;18、UseDnsForFetchingServiceUrls&mdash;&mdash;eureka客户端是否应该使用DNS机制来获取eureka服务器的地址列表，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;19、RegisterWithEureka&mdash;&mdash;实例是否在eureka服务器上注册自己的信息以供其他服务发现，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;20、PreferSameZoneEureka&mdash;&mdash;实例是否使用同一zone里的eureka服务器，默认为true，理想状态下，eureka客户端与服务端是在同一zone下<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;21、AllowRedirects&mdash;&mdash;服务器是否能够重定向客户端请求到备份服务器。 如果设置为false，服务器将直接处理请求，如果设置为true，它可能发送HTTP重定向到客户端。默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;22、LogDeltaDiff&mdash;&mdash;是否记录eureka服务器和客户端之间在注册表的信息方面的差异，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;23、DisableDelta(*)&mdash;&mdash;默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;24、fetchRegistryForRemoteRegions&mdash;&mdash;eureka服务注册表信息里的以逗号隔开的地区名单，如果不这样返回这些地区名单，则客户端启动将会出错。默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;25、Region&mdash;&mdash;获取实例所在的地区。默认为us-east-1<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;26、AvailabilityZones&mdash;&mdash;获取实例所在的地区下可用性的区域列表，用逗号隔开。<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;27、EurekaServerServiceUrls&mdash;&mdash;Eureka服务器的连接，默认为http：//XXXX：X/eureka/,但是如果采用DNS方式获取服务地址，则不需要配置此设置。<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;28、FilterOnlyUpInstances（*）&mdash;&mdash;是否获得处于开启状态的实例的应用程序过滤之后的应用程序。默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;29、EurekaConnectionIdleTimeoutSeconds&mdash;&mdash;Eureka服务的http请求关闭之前其响应的时间，默认为30 秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;30、FetchRegistry&mdash;&mdash;此客户端是否获取eureka服务器注册表上的注册信息，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;31、RegistryRefreshSingleVipAddress&mdash;&mdash;此客户端只对一个单一的VIP注册表的信息感兴趣。默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;32、HeartbeatExecutorThreadPoolSize(*)&mdash;&mdash;心跳执行程序线程池的大小,默认为5<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;33、HeartbeatExecutorExponentialBackOffBound(*)&mdash;&mdash;心跳执行程序回退相关的属性，是重试延迟的最大倍数值，默认为10<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;34、CacheRefreshExecutorThreadPoolSize(*)&mdash;&mdash;执行程序缓存刷新线程池的大小，默认为5<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;35、CacheRefreshExecutorExponentialBackOffBound&mdash;&mdash;执行程序指数回退刷新的相关属性，是重试延迟的最大倍数值，默认为10<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;36、DollarReplacement&mdash;&mdash;eureka服务器序列化/反序列化的信息中获取&ldquo;$&rdquo;符号的的替换字符串。默认为&ldquo;_-&rdquo;<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;37、EscapeCharReplacement&mdash;&mdash;eureka服务器序列化/反序列化的信息中获取&ldquo;_&rdquo;符号的的替换字符串。默认为&ldquo;__&rdquo;<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;38、OnDemandUpdateStatusChange（*）&mdash;&mdash;如果设置为true,客户端的状态更新将会点播更新到远程服务器上，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;39、EncoderName&mdash;&mdash;这是一个短暂的编码器的配置，如果最新的编码器是稳定的，则可以去除，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;40、DecoderName&mdash;&mdash;这是一个短暂的解码器的配置，如果最新的解码器是稳定的，则可以去除，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;41、ClientDataAccept（*）&mdash;&mdash;客户端数据接收<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;42、Experimental（*）&mdash;&mdash; 当尝试新功能迁移过程时，为了避免配置API污染，相应的配置即可投入实验配置部分，默认为null</p>
+<hr>
+<h1>实例微服务端配置</h1>
+
+&nbsp; &nbsp; &nbsp; &nbsp;1、InstanceId&mdash;&mdash;此实例注册到eureka服务端的唯一的实例ID,其组成为${spring.application.name}:${spring.application.instance_id:${random.value}}<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;2、Appname&mdash;&mdash;获得在eureka服务上注册的应用程序的名字，默认为unknow<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;3、AppGroupName&mdash;&mdash;获得在eureka服务上注册的应用程序组的名字，默认为unknow<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;4、InstanceEnabledOnit（*）&mdash;&mdash;实例注册到eureka服务器时，是否开启通讯，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;5、NonSecurePort&mdash;&mdash;获取该实例应该接收通信的非安全端口。默认为80<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;6、SecurePort&mdash;&mdash;获取该实例应该接收通信的安全端口，默认为443<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;7、NonSecurePortEnabled&mdash;&mdash;该实例应该接收通信的非安全端口是否启用，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;8、SecurePortEnabled&mdash;&mdash;该实例应该接收通信的安全端口是否启用，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;9、LeaseRenewalIntervalInSeconds&mdash;&mdash; eureka客户需要多长时间发送心跳给eureka服务器，表明它仍然活着,默认为30 秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;10、LeaseExpirationDurationInSeconds&mdash;&mdash;Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;11、VirtualHostName&mdash;&mdash; 此实例定义的虚拟主机名，其他实例将通过使用虚拟主机名找到该实例。<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;12、SecureVirtualHostName&mdash;&mdash;此实例定义的安全虚拟主机名<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;13、ASGName（*）&mdash;&mdash;与此实例相关联 AWS自动缩放组名称。此项配置是在AWS环境专门使用的实例启动，它已被用于流量停用后自动把一个实例退出服务。<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;14、HostName&mdash;&mdash;与此实例相关联的主机名，是其他实例可以用来进行请求的准确名称<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;15、MetadataMap(*)&mdash;&mdash;获取与此实例相关联的元数据(key,value)。这个信息被发送到eureka服务器，其他实例可以使用。<br />
+&nbsp; &nbsp; &nbsp; &nbsp;16、DataCenterInfo（*）&mdash;&mdash;该实例被部署在数据中心<br />
+&nbsp; &nbsp; &nbsp; &nbsp;17、IpAddress&mdash;&mdash;获取实例的ip地址<br />
+&nbsp; &nbsp; &nbsp; &nbsp;18、StatusPageUrlPath（*）&mdash;&mdash;获取此实例状态页的URL路径，然后构造出主机名，安全端口等，默认为/info<br />
+&nbsp; &nbsp; &nbsp; &nbsp;19、StatusPageUrl(*)&mdash;&mdash;获取此实例绝对状态页的URL路径，为其他服务提供信息时来找到这个实例的状态的路径，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;20、HomePageUrlPath（*）&mdash;&mdash;获取此实例的相关主页URL路径，然后构造出主机名，安全端口等，默认为/<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;21、HomePageUrl(*)&mdash;&mdash;获取此实例的绝对主页URL路径，为其他服务提供信息时使用的路径,默认为null<br />
+&nbsp; &nbsp; &nbsp; &nbsp;22、HealthCheckUrlPath&mdash;&mdash;获取此实例的相对健康检查URL路径，默认为/health<br />
+&nbsp; &nbsp; &nbsp; &nbsp;23、HealthCheckUrl&mdash;&mdash; 获取此实例的绝对健康检查URL路径,默认为null<br />
+&nbsp; &nbsp; &nbsp; &nbsp;24、SecureHealthCheckUrl&mdash;&mdash;获取此实例的绝对安全健康检查网页的URL路径，默认为null<br />
+&nbsp; &nbsp; &nbsp; &nbsp;25、DefaultAddressResolutionOrder&mdash;&mdash;获取实例的网络地址，默认为[]<br />
+&nbsp; &nbsp; &nbsp; &nbsp;26、Namespace&mdash;&mdash;获取用于查找属性的命名空间，默认为eureka<br />
+&nbsp;
+<hr>
+<h1>Eureka服务端配置</h1>
+
+&nbsp; &nbsp; &nbsp; &nbsp;1、AWSAccessId&mdash;&mdash;获取aws访问的id，主要用于弹性ip绑定，此配置是用于aws上的，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;2、AWSSecretKey&mdash;&mdash;获取aws私有秘钥，主要用于弹性ip绑定，此配置是用于aws上的，默认为null<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;3、EIPBindRebindRetries&mdash;&mdash;获取服务器尝试绑定到候选的EIP的次数，默认为3<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;4、EIPBindingRetryIntervalMsWhenUnbound(*)&mdash;&mdash;服务器检查ip绑定的时间间隔，单位为毫秒，默认为1 * 60 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;5、EIPBindingRetryIntervalMs&mdash;&mdash;与上面的是同一作用，仅仅是稳定状态检查，默认为5 * 60 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;6、EnableSelfPreservation&mdash;&mdash; 自我保护模式，当出现出现网络分区、eureka在短时间内丢失过多客户端时，会进入自我保护模式，即一个服务长时间没有发送心跳，eureka也不会将其删除，默认为true<br />
+&nbsp; &nbsp; &nbsp; &nbsp;7、RenewalPercentThreshold(*)&mdash;&mdash;阈值因子，默认是0.85，如果阈值比最小值大，则自我保护模式开启<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;8、RenewalThresholdUpdateIntervalMs&mdash;&mdash;阈值更新的时间间隔，单位为毫秒，默认为15 * 60 * 1000<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;9、PeerEurekaNodesUpdateIntervalMs(*)&mdash;&mdash;集群里eureka节点的变化信息更新的时间间隔，单位为毫秒，默认为10 * 60 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;10、EnableReplicatedRequestCompression&mdash;&mdash;复制的数据在发送请求时是否被压缩，默认为false<br />
+&nbsp; &nbsp; &nbsp; &nbsp;11、NumberOfReplicationRetries&mdash;&mdash;获取集群里服务器尝试复制数据的次数，默认为5<br />
+&nbsp; &nbsp; &nbsp; &nbsp;12、PeerEurekaStatusRefreshTimeIntervalMs&mdash;&mdash; 服务器节点的状态信息被更新的时间间隔，单位为毫秒，默认为30 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;13、WaitTimeInMsWhenSyncEmpty(*)&mdash;&mdash;在Eureka服务器获取不到集群里对等服务器上的实例时，需要等待的时间，单位为毫秒，默认为1000 * 60 * 5<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;14、PeerNodeConnectTimeoutMs&mdash;&mdash;连接对等节点服务器复制的超时的时间，单位为毫秒，默认为200<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;15、PeerNodeReadTimeoutMs&mdash;&mdash;读取对等节点服务器复制的超时的时间，单位为毫秒，默认为200<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;16、PeerNodeTotalConnections&mdash;&mdash;获取对等节点上http连接的总数，默认为1000<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;17、PeerNodeTotalConnectionsPerHost(*)&mdash;&mdash;获取特定的对等节点上http连接的总数，默认为500<br />
+&nbsp; &nbsp; &nbsp; &nbsp;18、PeerNodeConnectionIdleTimeoutSeconds(*)&mdash;&mdash;http连接被清理之后服务器的空闲时间，默认为30秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;19、RetentionTimeInMSInDeltaQueue(*)&mdash;&mdash;客户端保持增量信息缓存的时间，从而保证不会丢失这些信息，单位为毫秒，默认为3 * 60 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;20、DeltaRetentionTimerIntervalInMs&mdash;&mdash;清理任务程序被唤醒的时间间隔，清理过期的增量信息，单位为毫秒，默认为30 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;21、EvictionIntervalTimerInMs&mdash;&mdash;过期实例应该启动并运行的时间间隔，单位为毫秒，默认为60 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;22、ASGQueryTimeoutMs（*）&mdash;&mdash;查询AWS上ASG（自动缩放组）信息的超时值，单位为毫秒，默认为300<br />
+&nbsp; &nbsp; &nbsp; &nbsp;23、ASGUpdateIntervalMs&mdash;&mdash;从AWS上更新ASG信息的时间间隔，单位为毫秒，默认为5 * 60 * 1000<br />
+&nbsp; &nbsp; &nbsp; &nbsp;24、ASGCacheExpiryTimeoutMs(*)&mdash;&mdash;缓存ASG信息的到期时间，单位为毫秒，默认为10 * 60 * 1000<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;25、ResponseCacheAutoExpirationInSeconds（*）&mdash;&mdash;当注册表信息被改变时，则其被保存在缓存中不失效的时间，默认为180秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;26、ResponseCacheUpdateIntervalMs（*）&mdash;&mdash;客户端的有效负载缓存应该更新的时间间隔，默认为30 * 1000毫秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;27、UseReadOnlyResponseCache（*）&mdash;&mdash;目前采用的是二级缓存策略，一个是读写高速缓存过期策略，另一个没有过期只有只读缓存，默认为true，表示只读缓存<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;28、DisableDelta（*）&mdash;&mdash;增量信息是否可以提供给客户端看，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;29、MaxIdleThreadInMinutesAgeForStatusReplication（*）&mdash;&mdash;状态复制线程可以保持存活的空闲时间，默认为10分钟<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;30、MinThreadsForStatusReplication&mdash;&mdash;被用于状态复制的线程的最小数目，默认为1<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;31、MaxThreadsForStatusReplication&mdash;&mdash;被用于状态复制的线程的最大数目，默认为1<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;32、MaxElementsInStatusReplicationPool&mdash;&mdash;可允许的状态复制池备份复制事件的最大数量，默认为10000<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;33、SyncWhenTimestampDiffers&mdash;&mdash;当时间变化实例是否跟着同步，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;34、RegistrySyncRetries&mdash;&mdash;当eureka服务器启动时尝试去获取集群里其他服务器上的注册信息的次数，默认为5<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;35、RegistrySyncRetryWaitMs&mdash;&mdash;当eureka服务器启动时获取其他服务器的注册信息失败时，会再次尝试获取，期间需要等待的时间，默认为30 * 1000毫秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;36、MaxElementsInPeerReplicationPool（*）&mdash;&mdash;复制池备份复制事件的最大数量，默认为10000<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;37、MaxIdleThreadAgeInMinutesForPeerReplication（*）&mdash;&mdash;复制线程可以保持存活的空闲时间，默认为15分钟<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;38、MinThreadsForPeerReplication（*）&mdash;&mdash;获取将被用于复制线程的最小数目，默认为5<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;39、MaxThreadsForPeerReplication&mdash;&mdash;获取将被用于复制线程的最大数目，默认为20<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;40、MaxTimeForReplication（*）&mdash;&mdash;尝试在丢弃复制事件之前进行复制的时间，默认为30000毫秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;41、PrimeAwsReplicaConnections（*）&mdash;&mdash;对集群中服务器节点的连接是否应该准备，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;42、DisableDeltaForRemoteRegions（*）&mdash;&mdash;增量信息是否可以提供给客户端或一些远程地区，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;43、RemoteRegionConnectTimeoutMs（*）&mdash;&mdash;连接到对等远程地eureka节点的超时时间，默认为1000毫秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;44、RemoteRegionReadTimeoutMs（*）&mdash;&mdash;获取从远程地区eureka节点读取信息的超时时间，默认为1000毫秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;45、RemoteRegionTotalConnections&mdash;&mdash;获取远程地区对等节点上http连接的总数，默认为1000<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;46、RemoteRegionTotalConnectionsPerHost&mdash;&mdash;获取远程地区特定的对等节点上http连接的总数，默认为500<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;47、RemoteRegionConnectionIdleTimeoutSeconds&mdash;&mdash;http连接被清理之后远程地区服务器的空闲时间，默认为30秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;48、GZipContentFromRemoteRegion（*）&mdash;&mdash;eureka服务器中获取的内容是否在远程地区被压缩，默认为true<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;49、RemoteRegionUrlsWithName&mdash;&mdash;针对远程地区发现的网址域名的map<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;50、RemoteRegionUrls&mdash;&mdash;远程地区的URL列表<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;51、RemoteRegionAppWhitelist（*）&mdash;&mdash; 必须通过远程区域中检索的应用程序的列表<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;52、RemoteRegionRegistryFetchInterval&mdash;&mdash;从远程区域取出该注册表的信息的时间间隔，默认为30秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;53、RemoteRegionFetchThreadPoolSize&mdash;&mdash;用于执行远程区域注册表请求的线程池的大小，默认为20<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;54、RemoteRegionTrustStore&mdash;&mdash;用来合格请求远程区域注册表的信任存储文件，默认为空<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;55、RemoteRegionTrustStorePassword&mdash;&mdash;获取偏远地区信任存储文件的密码，默认为&ldquo;changeit&rdquo;<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;56、disableTransparentFallbackToOtherRegion(*)&mdash;&mdash;如果在远程区域本地没有实例运行，对于应用程序回退的旧行为是否被禁用， 默认为false<br />
+&nbsp; &nbsp; &nbsp; &nbsp;57、BatchReplication(*)&mdash;&mdash;表示集群节点之间的复制是否为了网络效率而进行批处理，默认为false<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;58、LogIdentityHeaders(*)&mdash;&mdash; Eureka服务器是否应该登录clientAuthHeaders，默认为true<br />
+&nbsp; &nbsp; &nbsp; &nbsp;59、RateLimiterEnabled&mdash;&mdash;限流是否应启用或禁用，默认为false<br />
+&nbsp; &nbsp; &nbsp; &nbsp;60、RateLimiterThrottleStandardClients&mdash;&mdash;是否对标准客户端进行限流，默认false<br />
+&nbsp; &nbsp; &nbsp; &nbsp;61、RateLimiterPrivilegedClients（*）&mdash;&mdash;认证的客户端列表，这里是除了标准的eureka Java客户端。<br />
+&nbsp; &nbsp; &nbsp; &nbsp;62、RateLimiterBurstSize（*）&mdash;&mdash;速率限制的burst size ，默认为10，这里用的是令牌桶算法<br />
+&nbsp; &nbsp; &nbsp; &nbsp;63、RateLimiterRegistryFetchAverageRate(*)&mdash;&mdash;速率限制器用的是令牌桶算法，此配置指定平均执行注册请求速率，默认为500<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;64、RateLimiterFullFetchAverageRate（*）&mdash;&mdash;速率限制器用的是令牌桶算法，此配置指定平均执行请求速率，默认为100<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;65、ListAutoScalingGroupsRoleName（*）&mdash;&mdash;用来描述从AWS第三账户的自动缩放组中的角色名称，默认为&ldquo;ListAutoScalingGroups&rdquo;<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;66、JsonCodecName（*）&mdash;&mdash;如果没有设置默认的编解码器将使用全JSON编解码器，获取的是编码器的类名称<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;67、XmlCodecName(*)&mdash;&mdash;如果没有设置默认的编解码器将使用xml编解码器，获取的是编码器的类名称<br />
+&nbsp; &nbsp; &nbsp; &nbsp;68、BindingStrategy(*)&mdash;&mdash;获取配置绑定EIP或Route53的策略。<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;69、Route53DomainTTL（*）&mdash;&mdash;用于建立route53域的ttl，默认为301<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;70、Route53BindRebindRetries（*）&mdash;&mdash;服务器尝试绑定到候选Route53域的次数，默认为3<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;71、Route53BindingRetryIntervalMs（*）&mdash;&mdash;服务器应该检查是否和Route53域绑定的时间间隔，默认为5 * 60 * 1000毫秒<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;72、Experimental(*)&mdash;&mdash;当尝试新功能迁移过程时，为了避免配置API污染，相应的配置即可投入实验配置部分，默认为null<br />
+&nbsp;</p>
+<p>&nbsp;</p>
+    <p class="dateview"><span>2013-05-11</span><span>作者：张文波</span><span>分类：<a href="" target="_blank">随心笔记</a></span><span>阅读(0)</span><span>评论(0)</span></p>
+    </ul>
+  <!--article end-->
+    </div> 
+  </div>  
+<aside class="navsidebar">
+    <h2><p>个人档案</p></h2>
+   <div class="vcard">
+      <p class="fn">姓名：张文波</p>
+      <p class="nickname">网名：最后的轻语</p>
+      <p class="url">主页：<a href="http://zwbzy.top/" target="_blank">http://zwbzy.top/</a></p>
+      <p class="address">现居：北京市—房山区</p>
+      <p class="role">职业：网java开发</p>
+    </div>   
+   <h2><p>目录</p></h2>
+<ul class="news">
+  <li><a href="">慢生活(3)</a></li>
+  <li><a href="">程序人生(25)</a></li>
+  <li><a href="">经典美文(39)</a></li>
+</ul>
+<h2><p>外文链接</p></h2>
+<ul class="news">
+  <li><a href="https://www.cnblogs.com/springboot/p/8445780.html">SpringCloud微服务框架搭建</a></li>
+  <li><a href="https://blog.csdn.net/weixin_37390956/article/details/80399613">SpringMVC+Thymeleaf配置</a></li>
+  <li><a href="">6月毕业季，祝福送给你</a></li>
+  <li><a href="">生活常有缺席的-可搞笑从来不缺席</a></li>
+  <li><a href="">为了一个不存在的梦，执念了那么多年</a></li>
+  <li><a href="">妹妹，明天你就要嫁人啦</a></li>
+</ul>
+<h2><p>文章归档</p></h2>
+<ul class="news">
+  <li><a href="">2008 年三月</a></li>
+  <li><a href="">2008 年四月</a></li>
+  <li><a href="">2008 年六月</a></li>
+</ul>
+<h2><p>友情链接</p></h2>
+<ul class="news">
+  <li><a href="http://www.yangqq.com">杨青个人博客</a></li>
+</ul>
+</aside>
+</article>
+<div id="copright">Design by <a href="http://www.yangqq.com" target="_blank">DanceSmile</a></div>
+</body>
+</html>

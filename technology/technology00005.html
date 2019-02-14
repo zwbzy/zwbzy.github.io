@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>mySql卸载重装</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<link href="css/index.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="">花气袭人是酒香</a></h1>
+			<p>这夏天里流动的风情，是停不住的舞步和唱不完的情歌，当玫瑰花瓣飘飞的那一刻，风会带走所有的想念.......</p>
+		</header>
+		<div class="navswf">
+			<object id="customMenu" data="images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+			<div id="nav">
+				<ul>
+					<li>
+						<a href="../index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="../manShenhuo/manShenhuo.html" title="慢生活">慢生活</a>
+					</li>
+					<li>
+						<a href="../technology/technology.html" title="技术探讨">技术探讨</a>
+					</li>
+					<li>
+						<a href="../webMoban/webMoban.html" title="个人网站模板">网站模板</a>
+					</li>
+					<li>
+						<a href="../newstalk/newstalk.html" target="" title="碎言碎语">碎言碎语</a>
+					</li>
+					<li>
+						<a href="../liuYanban/liuYanban.html" title="留言版">留言版</a>
+					</li>
+				</ul>
+				<script src="js/silder.js"></script>
+				<!--获取当前页导航 高亮显示标题-->
+			</div>
+		</div>
+		<div class="blank"></div>
+		<article>
+			<div class="content">
+				<div class="bloglist">
+					<!--article begin-->
+					<ul>
+						<h1>jvm类加载机制及静态变量初始化</h1>
+						</br>
+						<p>当运行一段java程序时，jvm首先会去加载程序所依赖的所有class文件，过程如下</p>
+
+						<p>1.加载：对所有类进行加载，在内存中生成一个代表这个类的java.lang.Class对象；这里的类包涵java文件编译后的class文件，</p>
+
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jar包和war包；jsp文件转换成的class类；动态代理生成的class对象及其他。</p>
+
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------jar和war的区别</p>
+
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------jar一些类文件的集合，便于储存，有主函数则可以运行；war一个web项目，放在web服务器下可以&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 运行</p>
+
+						<p>2.验证：确保加载的类信息符合JVM规范</p>
+
+						<p>3.准备：为类变量分配内存并设置类变量的默认值【int -0，String-null】</p>
+
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在准备阶段后&nbsp;&nbsp;&nbsp;a=0&nbsp;&nbsp;&nbsp;而&nbsp;&nbsp;&nbsp;b=8888&nbsp;&nbsp;&nbsp;</p>
+
+						<p>4.解析：将常量池中的符号引用替换为直接引用</p>
+
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 解析之前java类并不知道所引用的类的实际地址，因此只能使用符号引用来代替，解析之后将符号引用替&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;换为引用类的实</p>
+
+						<p>际地址</p>
+
+						<p>5.初始化:为静态变量赋予正确的初始值&nbsp;&nbsp;&nbsp;&nbsp;执行上面的赋值运算&nbsp;&nbsp;a=8888&nbsp;&nbsp;&nbsp;而&nbsp;&nbsp;b=8888&nbsp;&nbsp;&nbsp;在准备阶段执行</p>
+
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此时才可认为，类中的代码被真正得执行，前面都是准备工作，为变量分配内存</p>
+
+					</ul>
+					<!--article end-->
+				</div>
+			</div>
+			<aside class="navsidebar">
+				<h2><p>个人档案</p></h2>
+				<div class="vcard">
+					<p class="fn">姓名：张文波</p>
+					<p class="nickname">网名：最后的轻语</p>
+					<p class="url">主页：
+						<a href="http://zwbzy.top/" target="_blank">http://zwbzy.top/</a>
+					</p>
+					<p class="address">现居：北京市—房山区</p>
+					<p class="role">职业：网java开发</p>
+				</div>
+				<h2><p>目录</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">慢生活(3)</a>
+					</li>
+					<li>
+						<a href="">程序人生(25)</a>
+					</li>
+					<li>
+						<a href="">经典美文(39)</a>
+					</li>
+				</ul>
+				<h2><p>外文链接</p></h2>
+				<ul class="news">
+					<li>
+						<a href="https://www.cnblogs.com/springboot/p/8445780.html">SpringCloud微服务框架搭建</a>
+					</li>
+					<li>
+						<a href="https://blog.csdn.net/weixin_37390956/article/details/80399613">SpringMVC+Thymeleaf配置</a>
+					</li>
+					<li>
+						<a href="">6月毕业季，祝福送给你</a>
+					</li>
+					<li>
+						<a href="">生活常有缺席的-可搞笑从来不缺席</a>
+					</li>
+					<li>
+						<a href="">为了一个不存在的梦，执念了那么多年</a>
+					</li>
+					<li>
+						<a href="">妹妹，明天你就要嫁人啦</a>
+					</li>
+				</ul>
+				<h2><p>文章归档</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">2008 年三月</a>
+					</li>
+					<li>
+						<a href="">2008 年四月</a>
+					</li>
+					<li>
+						<a href="">2008 年六月</a>
+					</li>
+				</ul>
+				<h2><p>友情链接</p></h2>
+				<ul class="news">
+					<li>
+						<a href="http://www.yangqq.com">杨青个人博客</a>
+					</li>
+				</ul>
+			</aside>
+		</article>
+		<div id="copright">Design by
+			<a href="http://www.yangqq.com" target="_blank">DanceSmile</a>
+		</div>
+	</body>
+
+</html>

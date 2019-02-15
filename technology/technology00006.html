@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>mySql卸载重装</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<link href="css/index.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="">花气袭人是酒香</a></h1>
+			<p>这夏天里流动的风情，是停不住的舞步和唱不完的情歌，当玫瑰花瓣飘飞的那一刻，风会带走所有的想念.......</p>
+		</header>
+		<div class="navswf">
+			<object id="customMenu" data="images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+			<div id="nav">
+				<ul>
+					<li>
+						<a href="../index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="../manShenhuo/manShenhuo.html" title="慢生活">慢生活</a>
+					</li>
+					<li>
+						<a href="../technology/technology.html" title="技术探讨">技术探讨</a>
+					</li>
+					<li>
+						<a href="../webMoban/webMoban.html" title="个人网站模板">网站模板</a>
+					</li>
+					<li>
+						<a href="../newstalk/newstalk.html" target="" title="碎言碎语">碎言碎语</a>
+					</li>
+					<li>
+						<a href="../liuYanban/liuYanban.html" title="留言版">留言版</a>
+					</li>
+				</ul>
+				<script src="js/silder.js"></script>
+				<!--获取当前页导航 高亮显示标题-->
+			</div>
+		</div>
+		<div class="blank"></div>
+		<article>
+			<div class="content">
+				<div class="bloglist">
+					<ul>
+						<h2>jQuery-Validate（表单校验插件）</h2>
+					</ul>
+					<!--article begin-->
+					<ul>
+						<li>
+							<h3>默认校验规则</h3>
+						</li>
+
+						<pre>
+(1)、required:true               必输字段
+(2)、remote:&quot;remote-valid.jsp&quot;   使用ajax方法调用remote-valid.jsp验证输入值
+(3)、email:true                  必须输入正确格式的电子邮件
+(4)、url:true                    必须输入正确格式的网址
+(5)、date:true                   必须输入正确格式的日期，日期校验ie6出错，慎用
+(6)、dateISO:true                必须输入正确格式的日期(ISO)，例如：2009-06-23，1998/01/22 只验证格式，不验证有效性
+(7)、number:true                 必须输入合法的数字(负数，小数)
+(8)、digits:true                 必须输入整数
+(9)、creditcard:true             必须输入合法的信用卡号
+(10)、equalTo:&quot;#password&quot;        输入值必须和#password相同
+(11)、accept:                    输入拥有合法后缀名的字符串（上传文件的后缀）
+(12)、maxlength:5                输入长度最多是5的字符串(汉字算一个字符)
+(13)、minlength:10               输入长度最小是10的字符串(汉字算一个字符)
+(14)、rangelength:[5,10]         输入长度必须介于 5 和 10 之间的字符串&quot;)(汉字算一个字符)
+(15)、range:[5,10]               输入值必须介于 5 和 10 之间
+(16)、max:5                      输入值不能大于5
+(17)、min:10                     输入值不能小于10</pre>
+					</ul>
+
+					<ul>
+						<li>
+							<h3>默认提示</h3>
+						</li>
+
+						<pre>
+messages: {
+required: &quot;This field is required.&quot;,
+remote: &quot;Please fix this field.&quot;,
+email: &quot;Please enter a valid email address.&quot;,
+url: &quot;Please enter a valid URL.&quot;,
+date: &quot;Please enter a valid date.&quot;,
+dateISO: &quot;Please enter a valid date (ISO).&quot;,
+dateDE: &quot;Bitte geben Sie ein g眉ltiges Datum ein.&quot;,
+number: &quot;Please enter a valid number.&quot;,
+numberDE: &quot;Bitte geben Sie eine Nummer ein.&quot;,
+digits: &quot;Please enter only digits&quot;,
+creditcard: &quot;Please enter a valid credit card number.&quot;,
+equalTo: &quot;Please enter the same value again.&quot;,
+accept: &quot;Please enter a value with a valid extension.&quot;,
+maxlength: $.validator.format(&quot;Please enter no more than {0} characters.&quot;),
+minlength: $.validator.format(&quot;Please enter at least {0} characters.&quot;),
+rangelength: $.validator.format(&quot;Please enter a value between {0} and {1} characters long.&quot;),
+range: $.validator.format(&quot;Please enter a value between {0} and {1}.&quot;),
+max: $.validator.format(&quot;Please enter a value less than or equal to {0}.&quot;),
+min: $.validator.format(&quot;Please enter a value greater than or equal to {0}.&quot;)
+},</pre>
+					</ul>
+					<ul>
+						<h4>使用时为标签添加属性即可</h4>
+						<img src="img/sssss.png" style="width: 700px;" />
+						<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&nbsp;&nbsp; &nbsp;&lt;head&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;meta charset=&quot;utf-8&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script src=&quot;http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script src=&quot;http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$.validator.setDefaults({
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;submitHandler: function() {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert(&quot;提交事件!&quot;);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;});
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$().ready(function() {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$(&quot;#commentForm&quot;).validate();
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;});
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/script&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;style&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.error {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;color: red;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/style&gt;
+&nbsp;&nbsp; &nbsp;&lt;/head&gt;
+&nbsp;&nbsp; &nbsp;&lt;body&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;form class=&quot;cmxform&quot; id=&quot;commentForm&quot; method=&quot;get&quot; action=&quot;&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;fieldset&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;legend&gt;输入您的名字，邮箱，URL，备注。&lt;/legend&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;label for=&quot;cname&quot;&gt;Name (必需, 最小两个字母)&lt;/label&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;input id=&quot;cname&quot; name=&quot;name&quot; minlength=&quot;2&quot; type=&quot;text&quot; required &gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;label for=&quot;cemail&quot;&gt;E-Mail (必需)&lt;/label&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;input id=&quot;cemail&quot; type=&quot;email&quot; name=&quot;email&quot; required &gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;label for=&quot;curl&quot;&gt;URL (可选)&lt;/label&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;input id=&quot;curl&quot; type=&quot;url&quot; name=&quot;url&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;label for=&quot;ccomment&quot;&gt;备注 (必需)&lt;/label&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;textarea id=&quot;ccomment&quot; name=&quot;comment&quot; email=&quot;true&quot; required&gt;&lt;/textarea&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;input class=&quot;submit&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/fieldset&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/form&gt;
+&nbsp;&nbsp; &nbsp;&lt;/body&gt;
+&lt;/html&gt;</pre>
+					</ul>
+
+					<ul>
+						<h4>js添加属性</h4>
+						<p>&lt;!DOCTYPE html&gt;<br /> &lt;html&gt;
+							<br /> &nbsp;&nbsp; &nbsp;&lt;head&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;meta charset=&quot;utf-8&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script src=&quot;http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js&quot;&gt;&lt;/script&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script src=&quot;http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js&quot;&gt;&lt;/script&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;function ss() {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$(&quot;#myform&quot;).validate({<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;submitHandler: function(form) { //表单提交句柄,为一回调函数，带一个参数：form &nbsp;&nbsp;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert(&quot;提交表单&quot;);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;form.submit(); //提交表单 &nbsp;&nbsp;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;rules: {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;name: {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;required: true<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;email: {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;required: true,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;email: true<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;messages: {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;name: {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;required: &quot;必填&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;},<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;email: {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;required: &quot;必填&quot;,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;email: &quot;E-Mail格式不正确&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;})<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/script&gt;<br /> &nbsp;&nbsp; &nbsp;&lt;/head&gt;<br /> &nbsp;&nbsp; &nbsp;&lt;body&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;form class=&quot;&quot; id=&quot;myform&quot; method=&quot;&quot; action=&quot;&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;fieldset&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;legend&gt;输入您的名字，邮箱，URL，备注。&lt;/legend&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;input id=&quot;cname&quot; name=&quot;name&quot; &nbsp;type=&quot;text&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;p&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;input id=&quot;cemail&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/p&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button onclick=&quot;ss()&quot; &gt;sss&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/fieldset&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/form&gt;<br /> &nbsp;&nbsp; &nbsp;&lt;/body&gt;<br /> &lt;/html&gt;
+						</p>
+
+					</ul>
+					<!--article end-->
+				</div>
+			</div>
+			<aside class="navsidebar">
+				<h2><p>个人档案</p></h2>
+				<div class="vcard">
+					<p class="fn">姓名：张文波</p>
+					<p class="nickname">网名：最后的轻语</p>
+					<p class="url">主页：
+						<a href="http://zwbzy.top/" target="_blank">http://zwbzy.top/</a>
+					</p>
+					<p class="address">现居：北京市—房山区</p>
+					<p class="role">职业：网java开发</p>
+				</div>
+				<h2><p>目录</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">慢生活(3)</a>
+					</li>
+					<li>
+						<a href="">程序人生(25)</a>
+					</li>
+					<li>
+						<a href="">经典美文(39)</a>
+					</li>
+				</ul>
+				<h2><p>外文链接</p></h2>
+				<ul class="news">
+					<li>
+						<a href="https://www.cnblogs.com/springboot/p/8445780.html">SpringCloud微服务框架搭建</a>
+					</li>
+					<li>
+						<a href="https://blog.csdn.net/weixin_37390956/article/details/80399613">SpringMVC+Thymeleaf配置</a>
+					</li>
+					<li>
+						<a href="">6月毕业季，祝福送给你</a>
+					</li>
+					<li>
+						<a href="">生活常有缺席的-可搞笑从来不缺席</a>
+					</li>
+					<li>
+						<a href="">为了一个不存在的梦，执念了那么多年</a>
+					</li>
+					<li>
+						<a href="">妹妹，明天你就要嫁人啦</a>
+					</li>
+				</ul>
+				<h2><p>文章归档</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">2008 年三月</a>
+					</li>
+					<li>
+						<a href="">2008 年四月</a>
+					</li>
+					<li>
+						<a href="">2008 年六月</a>
+					</li>
+				</ul>
+				<h2><p>友情链接</p></h2>
+				<ul class="news">
+					<li><a href="">她的博客</a></li>
+				</ul>
+			</aside>
+		</article>
+		<div id="copright">Design by
+			<a href="http://www.yangqq.com" target="_blank">DanceSmile</a>
+		</div>
+	</body>
+
+</html>

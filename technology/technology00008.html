@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>bootStrap-bssuggest（搜索建议插件）</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<link href="css/index.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="">花气袭人是酒香</a></h1>
+			<p>这夏天里流动的风情，是停不住的舞步和唱不完的情歌，当玫瑰花瓣飘飞的那一刻，风会带走所有的想念.......</p>
+		</header>
+		<div class="navswf">
+			<object id="customMenu" data="images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+			<div id="nav">
+				<ul>
+					<li>
+						<a href="../index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="../manShenhuo/manShenhuo.html" title="慢生活">慢生活</a>
+					</li>
+					<li>
+						<a href="../technology/technology.html" title="技术探讨">技术探讨</a>
+					</li>
+					<li>
+						<a href="../webMoban/webMoban.html" title="个人网站模板">网站模板</a>
+					</li>
+					<li>
+						<a href="../newstalk/newstalk.html" target="" title="碎言碎语">碎言碎语</a>
+					</li>
+					<li>
+						<a href="../liuYanban/liuYanban.html" title="留言版">留言版</a>
+					</li>
+				</ul>
+				<script src="js/silder.js"></script>
+				<!--获取当前页导航 高亮显示标题-->
+			</div>
+		</div>
+		<div class="blank"></div>
+		<article>
+			<div class="content">
+				<div class="bloglist">
+					<!--article begin-->
+					<ul>
+						<h2>bootStrap-bssuggest（搜索建议插件）</h2>
+					</ul>
+					<ul>
+						<h4>js样例</h4>
+						<p>$(function(){<br /> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; $(&quot;#cargotestXL&quot;).bsSuggest(&#39;init&#39;, {<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;url: prefix + &quot;/cargoinfo&quot;,&nbsp;&nbsp; &nbsp;//请求数据的 URL 地址<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;effectiveFields: [&quot;cargoId&quot;, &quot;cargoName&quot;],&nbsp;&nbsp; &nbsp;// 有效显示于列表中的字段，非有效字段都会过滤，默认全部有效。<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;searchFields: [&quot;cargoId&quot;, &quot;cargoName&quot;],&nbsp;&nbsp; &nbsp;// 是否双向匹配搜索。为 true 即输入关键字包含或包含于匹配字段均认为匹配成功，为 false 则输入关键字包含于匹配字段认为匹配成功<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;effectiveFieldsAlias:{cargoId: &quot;编号&quot;,cargoName: &quot;名称&quot;},&nbsp;&nbsp; &nbsp;// 有效字段的别名对象，用于 header 的显示<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;clearable: true,&nbsp;&nbsp; &nbsp;// 是否可清除已输入的内容<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;hideOnSelect: true,&nbsp;<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;idField: &quot;cargoId&quot;,&nbsp;&nbsp; &nbsp;//每组数据的哪个字段作为 data-id，优先级高于 indexId 设置（推荐）<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;keyField: &quot;cargoName&quot;&nbsp;&nbsp; &nbsp;//每组数据的哪个字段作为输入框内容，优先级高于 indexKey 设置（推荐）<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}).on(&#39;onDataRequestSuccess&#39;, function (e, result) {&nbsp;&nbsp; &nbsp;//当 AJAX 请求数据成功时触发，并传回结果到第二个参数<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;console.log(&#39;onDataRequestSuccess: &#39;, result);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}).on(&#39;onSetSelectValue&#39;, function (e, selectedData, selectedRawData) {&nbsp;&nbsp; &nbsp;//当从下拉菜单选取值时触发，并传回设置的数据到第二个参数<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//拿到下拉框id,给到隐藏域<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$(&quot;#cargoId&quot;).val(selectedData.id);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//放到隐藏域 &nbsp; 后台改一下<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;console.log(&#39;onSetSelectValue: &#39;, e.target.value, selectedData, selectedRawData);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}).on(&#39;onUnsetSelectValue&#39;, function () {&nbsp;&nbsp; &nbsp;//当设置了 idField，且自由输入内容时触发（与背景警告色显示同步）<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$(&quot;#cargoId&quot;).val(&quot;&quot;);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;console.log(&#39;onUnsetSelectValue&#39;);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}).on(&#39;onShowDropdown&#39;, function (e, data) {&nbsp;&nbsp; &nbsp;//下拉菜单显示时触发<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;console.log(&#39;onShowDropdown&#39;, e.target.value, data);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}).on(&#39;onHideDropdown&#39;, function (e, data) {&nbsp;&nbsp; &nbsp;//下拉菜单隐藏式触发<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;console.log(&#39;onHideDropdown&#39;, e.target.value, data);<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;});</p>
+					</ul>
+
+					<ul>
+						<h4>初始化属性</h4>
+						<ol>
+							<li>
+								<p>{</p>
+							</li>
+							<li>
+								<p>url: null, //请求数据的 URL 地址</p>
+							</li>
+							<li>
+								<p>jsonp: null, //设置此参数名，将开启jsonp功能，否则使用json数据结构</p>
+							</li>
+							<li>
+								<p>data: {}, //提示所用的数据</p>
+							</li>
+							<li>
+								<p>getDataMethod: &quot;firstByUrl&quot;, //获取数据的方式，url：一直从url请求；data：从 options.data 获取；firstByUrl：第一次从Url获取全部数据，之后从options.data获取</p>
+							</li>
+							<li>
+								<p>indexId: 0, //每组数据的第几个数据，作为input输入框的 data-id，设为 -1 且 idField 为空则不设置此值</p>
+							</li>
+							<li>
+								<p>indexKey: 0, //每组数据的第几个数据，作为input输入框的内容</p>
+							</li>
+							<li>
+								<p>idField: &quot;&quot;, //每组数据的哪个字段作为 data-id，优先级高于 indexId 设置（推荐）</p>
+							</li>
+							<li>
+								<p>keyField: &quot;&quot;, //每组数据的哪个字段作为输入框内容，优先级高于 indexKey 设置（推荐）</p>
+							</li>
+							<li>
+								<p>effectiveFields: [], //有效显示于列表中的字段，非有效字段都会过滤，默认全部，对自定义getData方法无效</p>
+							</li>
+							<li>
+								<p>effectiveFieldsAlias: {}, //有效字段的别名对象，用于 header 的显示</p>
+							</li>
+							<li>
+								<p>searchFields: [], //有效搜索字段，从前端搜索过滤数据时使用。effectiveFields 配置字段也会用于搜索过滤</p>
+							</li>
+							<li>
+								<p>showHeader: false, //是否显示选择列表的 header，默认有效字段大于一列时显示，否则不显示</p>
+							</li>
+							<li>
+								<p>showBtn: true, //是否显示下拉按钮</p>
+							</li>
+							<li>
+								<p>allowNoKeyword: true, //是否允许无关键字时请求数据</p>
+							</li>
+							<li>
+								<p>multiWord: false, //以分隔符号分割的多关键字支持</p>
+							</li>
+							<li>
+								<p>separator: &quot;,&quot;, //多关键字支持时的分隔符，默认为半角逗号</p>
+							</li>
+							<li>
+								<p>processData: processData, //格式化数据的方法，返回数据格式参考 data 参数</p>
+							</li>
+							<li>
+								<p>getData: getData, //获取数据的方法</p>
+							</li>
+							<li>
+								<p>autoMinWidth: false, //是否自动最小宽度，设为 false 则最小宽度不小于输入框宽度</p>
+							</li>
+							<li>
+								<p>listAlign: &quot;left&quot;, //提示列表对齐位置，left/right/auto</p>
+							</li>
+							<li>
+								<p>inputBgColor: &#39;&#39;, //输入框背景色，当与容器背景色不同时，可能需要该项的配置</p>
+							</li>
+							<li>
+								<p>inputWarnColor: &quot;rgba(255,0,0,.1)&quot;, //输入框内容不是下拉列表选择时的警告色</p>
+							</li>
+							<li>
+								<p>listStyle: {</p>
+							</li>
+							<li>
+								<p>&quot;padding-top&quot;:0, &quot;max-height&quot;: &quot;375px&quot;, &quot;max-width&quot;: &quot;800px&quot;,</p>
+							</li>
+							<li>
+								<p>&quot;overflow&quot;: &quot;auto&quot;, &quot;width&quot;: &quot;auto&quot;,</p>
+							</li>
+							<li>
+								<p>&quot;transition&quot;: &quot;0.3s&quot;, &quot;-webkit-transition&quot;: &quot;0.3s&quot;, &quot;-moz-transition&quot;: &quot;0.3s&quot;, &quot;-o-transition&quot;: &quot;0.3s&quot;</p>
+							</li>
+							<li>
+								<p>}, //列表的样式控制</p>
+							</li>
+							<li>
+								<p>listHoverStyle: &#39;background: #07d; color:#fff&#39;, //提示框列表鼠标悬浮的样式</p>
+							</li>
+							<li>
+								<p>listHoverCSS: &quot;jhover&quot;, //提示框列表鼠标悬浮的样式名称</p>
+							</li>
+							<li>
+								<p>keyLeft: 37, //向左方向键</p>
+							</li>
+							<li>
+								<p>keyUp: 38, //向上方向键</p>
+							</li>
+							<li>
+								<p>keyRight: 39, //向右方向键</p>
+							</li>
+							<li>
+								<p>keyDown: 40, //向下方向键</p>
+							</li>
+							<li>
+								<p>keyEnter: 13 //回车键</p>
+							</li>
+							<li>
+								<p>}</p>
+							</li>
+						</ol>
+					</ul>
+
+					<ul>
+						<h4>url 获取数据时，若格式不符合则要对数据的处理</h4>
+						<p>processData: function(json) { // url 获取数据时，对数据的处理，作为 getData 的回调函数&nbsp;<br /> &nbsp;&nbsp; &nbsp;var i, len, data = { value: [] };<br /> &nbsp;&nbsp; &nbsp;if(!json || json.length == 0) {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return false;<br /> &nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;len = json.length;<br /> &nbsp;&nbsp; &nbsp;for(i = 0; i &lt; len; i++) {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;data.value.push({<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&quot;name&quot;: json[i].name,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&quot;ename&quot;: json[i].ename,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&quot;departName&quot;: json[i].dep_name,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&quot;jobtitle&quot;: json[i].jobtitle,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&quot;eid&quot;: json[i].eid<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;});<br /> &nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;console.log(data);<br /> &nbsp;&nbsp; &nbsp;return data;<br /> }
+						</p>
+					</ul>
+
+					<ul>
+						<h4>返回数据格式</h4>
+						<p>var printEntity = {<br /> &nbsp;&nbsp; &nbsp;message：&quot;&quot;;<br /> &nbsp;&nbsp; &nbsp;code：&quot;&quot;;<br /> &nbsp;&nbsp; &nbsp;redirect：&quot;&quot;;<br /> &nbsp;&nbsp; &nbsp;value：&quot;&quot;;<br /> };
+						</p>
+
+					</ul>
+					<!--article end-->
+				</div>
+			</div>
+			<aside class="navsidebar">
+				<h2><p>个人档案</p></h2>
+				<div class="vcard">
+					<p class="fn">姓名：张文波</p>
+					<p class="nickname">网名：最后的轻语</p>
+					<p class="url">主页：
+						<a href="http://zwbzy.top/" target="_blank">http://zwbzy.top/</a>
+					</p>
+					<p class="address">现居：北京市—房山区</p>
+					<p class="role">职业：网java开发</p>
+				</div>
+				<h2><p>目录</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">慢生活(3)</a>
+					</li>
+					<li>
+						<a href="">程序人生(25)</a>
+					</li>
+					<li>
+						<a href="">经典美文(39)</a>
+					</li>
+				</ul>
+				<h2><p>外文链接</p></h2>
+				<ul class="news">
+					<li>
+						<a href="https://www.cnblogs.com/springboot/p/8445780.html">SpringCloud微服务框架搭建</a>
+					</li>
+					<li>
+						<a href="https://blog.csdn.net/weixin_37390956/article/details/80399613">SpringMVC+Thymeleaf配置</a>
+					</li>
+					<li>
+						<a href="">6月毕业季，祝福送给你</a>
+					</li>
+					<li>
+						<a href="">生活常有缺席的-可搞笑从来不缺席</a>
+					</li>
+					<li>
+						<a href="">为了一个不存在的梦，执念了那么多年</a>
+					</li>
+					<li>
+						<a href="">妹妹，明天你就要嫁人啦</a>
+					</li>
+				</ul>
+				<h2><p>文章归档</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">2008 年三月</a>
+					</li>
+					<li>
+						<a href="">2008 年四月</a>
+					</li>
+					<li>
+						<a href="">2008 年六月</a>
+					</li>
+				</ul>
+				<h2><p>友情链接</p></h2>
+				<ul class="news">
+					<li><a href="">她的博客</a></li>
+				</ul>
+			</aside>
+		</article>
+		<div id="copright">Design by
+			<a href="http://www.yangqq.com" target="_blank">DanceSmile</a>
+		</div>
+	</body>
+
+</html>

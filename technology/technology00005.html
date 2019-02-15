@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>mySql卸载重装</title>
+		<title>jvm类加载机制及静态变量初始化</title>
 		<meta name="Keywords" content="">
 		<meta name="Description" content="">
 		<link href="css/index.css" rel="stylesheet">
@@ -51,6 +51,9 @@
 				<div class="bloglist">
 					<!--article begin-->
 					<ul>
+						<h2><a title="Web之路，经历了心酸之后" href="technology.html">返回</a></h2>
+					</ul>
+					<ul>
 						<h1>jvm类加载机制及静态变量初始化</h1>
 						</br>
 						<p>当运行一段java程序时，jvm首先会去加载程序所依赖的所有class文件，过程如下</p>
@@ -61,7 +64,7 @@
 
 						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------jar和war的区别</p>
 
-						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------jar一些类文件的集合，便于储存，有主函数则可以运行；war一个web项目，放在web服务器下可以&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 运行</p>
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------jar一些类文件的集合，便于储存，有主函数则可以运行；war一个web项目，放在web服务器下可以 运行</p>
 
 						<p>2.验证：确保加载的类信息符合JVM规范</p>
 
@@ -71,9 +74,7 @@
 
 						<p>4.解析：将常量池中的符号引用替换为直接引用</p>
 
-						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 解析之前java类并不知道所引用的类的实际地址，因此只能使用符号引用来代替，解析之后将符号引用替&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;换为引用类的实</p>
-
-						<p>际地址</p>
+						<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 解析之前java类并不知道所引用的类的实际地址，因此只能使用符号引用来代替，解析之后将符号引用替换为引用类的实际地址</p>
 
 						<p>5.初始化:为静态变量赋予正确的初始值&nbsp;&nbsp;&nbsp;&nbsp;执行上面的赋值运算&nbsp;&nbsp;a=8888&nbsp;&nbsp;&nbsp;而&nbsp;&nbsp;b=8888&nbsp;&nbsp;&nbsp;在准备阶段执行</p>
 
@@ -141,9 +142,7 @@
 				</ul>
 				<h2><p>友情链接</p></h2>
 				<ul class="news">
-					<li>
-						<a href="http://www.yangqq.com">杨青个人博客</a>
-					</li>
+					<li><a href="">她的博客</a></li>
 				</ul>
 			</aside>
 		</article>

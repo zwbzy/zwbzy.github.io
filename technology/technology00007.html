@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>博客用命令</title>
+		<title>mySql卸载重装</title>
 		<meta name="Keywords" content="">
 		<meta name="Description" content="">
 		<link href="css/index.css" rel="stylesheet">
@@ -51,69 +51,7 @@
 				<div class="bloglist">
 					<!--article begin-->
 					<ul>
-							<h2><a title="Web之路，经历了心酸之后" href="technology.html">返回</a></h2>
-						</ul>
-					<ul>
-						<h1><strong><strong><strong>mybatis缓存机制</strong></strong></strong></h1>
-
-						<p>mybatis 缓存 分为一级缓存和二级缓存</p>
-
-						<ol>
-							<li>一级缓存为sqlSession，缓存内容只在sqlSession内有效</li>
-							<li>二级缓存为mapper级别的缓存</li>
-						</ol>
-
-						<p><strong><strong><strong>一级缓存</strong></strong>
-							</strong>
-						</p>
-
-						<p>在操作数据库时，会首先创建sqlSession会话对象，sql对象中会有一个私有的hashMap对象来储存数据，hashMap以（sql-查询语句,param-参数,nameSpace-命名空间）为key,以查询返回语句为value</p>
-
-						<p>&nbsp;public void test1() throws Exception{</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SqlSession session = SqlSessionFac.getSqlSession();</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 第一次查询</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User user = userMapper.selectUserById(1);</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(user.toString());</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 第二次查询</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User user2 = userMapper.selectUserById(1);</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(user2.toString());</p>
-
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session.close();</p>
-
-						<p>}</p>
-
-						<p>第一次执行select后，会将查询结果储存在sqlSession中，第二次 select ，如果查询参数相同，并且执行同一sql,则直接在缓存中读取数据。</p>
-
-						<p>&nbsp;</p>
-
-						<p>注意 ：</p>
-
-						<p>如果第一次查询之后，执行了（update ,delete,insert）,那么mybatis会清空缓存的数据。</p>
-
-						<p>mybatis默认开启一级缓存</p>
-
-						<p><strong><strong><strong>二级缓存</strong></strong>
-							</strong>
-						</p>
-
-						<p>1.二级缓存是mapper级别的缓存，也就是同一个namespace的mappe.xml，当多个SqlSession使用同一个Mapper操作数据库的时候，得到的数据会缓存在同一个二级缓存区域</p>
-
-						<p>2.二级缓存默认关闭，开启时，会优先将结果缓存到二级缓存中，查询时首先去一级缓存中查找，若没有则在二级缓存中查找，找到则返回查询结果</p>
-
-						<p>3.同一级缓存一样：</p>
-
-						<p>a.用于储存的hashMap以（sql-查询语句,param-参数,nameSpace-命名空间）为key,以查询返回语句为value</p>
-
-						<p>b.如果第一次查询之后，执行了（update ,delete,insert）,那么mybatis会清空缓存的数据。</p>
-
-						<p class="dateview" style="margin-top: 10px;"><span>2013-05-11</span><span>作者：张文波</span><span>分类：<a href="" target="_blank">随心笔记</a></span><span>阅读(0)</span><span>评论(0)</span></p>
+						<h2>bootstrap-table</h2>
 					</ul>
 					<!--article end-->
 				</div>

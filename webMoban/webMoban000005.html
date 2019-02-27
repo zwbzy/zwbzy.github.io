@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>技术探讨</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<link href="css/index.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="">花气袭人是酒香</a></h1>
+			<p>这夏天里流动的风情，是停不住的舞步和唱不完的情歌，当玫瑰花瓣飘飞的那一刻，风会带走所有的想念.......</p>
+		</header>
+		<div class="navswf">
+			<object id="customMenu" data="images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+			<div id="nav">
+				<ul>
+					<li>
+						<a href="../index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="../manShenhuo/manShenhuo.html" title="慢生活">慢生活</a>
+					</li>
+					<li>
+						<a href="../technology/technology.html" title="技术探讨">技术探讨</a>
+					</li>
+					<li>
+						<a href="../webMoban/webMoban.html" title="个人网站模板">前端随笔</a>
+					</li>
+					<li>
+						<a href="../newstalk/newstalk.html" target="" title="碎言碎语">碎言碎语</a>
+					</li>
+					<li>
+						<a href="../liuYanban/liuYanban.html" title="留言版">留言版</a>
+					</li>
+				</ul>
+				<script src="js/silder.js"></script>
+				<!--获取当前页导航 高亮显示标题-->
+			</div>
+		</div>
+		<div class="blank"></div>
+		<article>
+			<div class="content">
+				<div class="bloglist">
+					<ul>
+						<h2><a title="Web之路，经历了心酸之后" href="webMoban.html">返回</a></h2>
+					</ul>
+					<ul>
+						<h3>方法一</h3>
+						<p>public String index(HttpServletRequest request, ModelMap mmap) {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;UserDto user = getUserDto(request);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Long userId = user.getUserId();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_pldelete&quot;, permissionService.hasPermission(&quot;module:orderMgt:pldelete&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_hborder&quot;, permissionService.hasPermission(&quot;module:orderMgt:hborder&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_thprint&quot;, permissionService.hasPermission(&quot;module:orderMgt:thprint&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_printorder&quot;, permissionService.hasPermission(&quot;module:orderMgt:printorder&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_yccl&quot;, permissionService.hasPermission(&quot;module:orderMgt:yccl&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return prefix + &quot;/index&quot;;<br /> &nbsp;&nbsp; &nbsp;}</p>
+						<p>&lt;div class=&quot;form-control-static col-sm-offset-6&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button type=&quot;button&quot; &nbsp;onclick=&quot; $.table.search();&quot; class=&quot;btn btn-info&quot;&gt;查询&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;onclick=&quot;getID(&#39;shanchu&#39;)&quot; th:remove=&quot;${module_orderMgt_pldelete}&quot;&gt;批量删除&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot; onclick=&quot;getID(&#39;hedan&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_hborder}&quot;&gt;合并订单&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;onclick=&quot;getID(&#39;printTHOrder&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_thprint}&quot;&gt;提货打印&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;onclick=&quot;getID(&#39;printOrder&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_printorder}&quot;&gt;打印订单&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot; &nbsp;onclick=&quot;getID(&#39;toException&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_yccl}&quot;&gt;异常处理&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/div&gt;</p>
+						<p>判断权限，按钮是否显示</p>
+					</ul>
+					<ul>
+						<h3>方法二</h3>
+						<p>@GetMapping(&quot;/printTHTiao&quot;)<br /> &nbsp;&nbsp; &nbsp;public String printTHTiao(String ids, ModelMap mmap) {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.addAttribute(&quot;ids&quot;, ids);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return prefix + &quot;/pickUpPrint&quot;;<br /> &nbsp;&nbsp; &nbsp;}</p>
+						<p>&lt;input id=&quot;ids&quot; name=&quot;ids&quot; &nbsp;type=&quot;hidden&quot; &nbsp;th:value=&quot;${#httpServletRequest.getAttribute(&#39;ids&#39;)}&quot; /&gt;</p>
+
+					</ul>
+					<!--article end-->
+				</div>
+			</div>
+			<aside class="navsidebar">
+				<h2><p>个人档案</p></h2>
+				<div class="vcard">
+					<p class="fn">姓名：张文波</p>
+					<p class="nickname">网名：最后的轻语</p>
+					<p class="url">主页：
+						<a href="http://zwbzy.top/" target="_blank">http://zwbzy.top/</a>
+					</p>
+					<p class="address">现居：北京市—房山区</p>
+					<p class="role">职业：网java开发</p>
+				</div>
+				<h2><p>博客分类</p></h2>
+				<ul class="news">
+					<li>
+						<a href="technology00001.html">Git常用命令(3)</a>
+					</li>
+					<li>
+						<a href="">程序人生(25)</a>
+					</li>
+					<li>
+						<a href="">经典美文(39)</a>
+					</li>
+				</ul>
+				<h2><p>外文链接</p></h2>
+				<ul class="news">
+					<li>
+						<a href="https://www.cnblogs.com/springboot/p/8445780.html">SpringCloud微服务框架搭建</a>
+					</li>
+					<li>
+						<a href="https://blog.csdn.net/weixin_37390956/article/details/80399613">SpringMVC+Thymeleaf配置</a>
+					</li>
+					<li>
+						<a href="">6月毕业季，祝福送给你</a>
+					</li>
+					<li>
+						<a href="">生活常有缺席的-可搞笑从来不缺席</a>
+					</li>
+					<li>
+						<a href="">为了一个不存在的梦，执念了那么多年</a>
+					</li>
+					<li>
+						<a href="">妹妹，明天你就要嫁人啦</a>
+					</li>
+				</ul>
+				<h2><p>文章归档</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">2008 年三月</a>
+					</li>
+					<li>
+						<a href="">2008 年四月</a>
+					</li>
+					<li>
+						<a href="">2008 年六月</a>
+					</li>
+				</ul>
+				<h2><p>友情链接</p></h2>
+				<ul class="news">
+					<li>
+						<a href="">她的博客</a>
+					</li>
+				</ul>
+			</aside>
+		</article>
+		<div id="copright">Design by
+			<a href="http://www.yangqq.com" target="_blank">DanceSmile</a>
+		</div>
+	</body>
+
+</html>

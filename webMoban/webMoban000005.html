@@ -54,14 +54,464 @@
 					</ul>
 					<ul>
 						<h3>方法一</h3>
-						<p>public String index(HttpServletRequest request, ModelMap mmap) {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;UserDto user = getUserDto(request);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Long userId = user.getUserId();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_pldelete&quot;, permissionService.hasPermission(&quot;module:orderMgt:pldelete&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_hborder&quot;, permissionService.hasPermission(&quot;module:orderMgt:hborder&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_thprint&quot;, permissionService.hasPermission(&quot;module:orderMgt:thprint&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_printorder&quot;, permissionService.hasPermission(&quot;module:orderMgt:printorder&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.put(&quot;module_orderMgt_yccl&quot;, permissionService.hasPermission(&quot;module:orderMgt:yccl&quot;, userId));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return prefix + &quot;/index&quot;;<br /> &nbsp;&nbsp; &nbsp;}</p>
-						<p>&lt;div class=&quot;form-control-static col-sm-offset-6&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button type=&quot;button&quot; &nbsp;onclick=&quot; $.table.search();&quot; class=&quot;btn btn-info&quot;&gt;查询&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;onclick=&quot;getID(&#39;shanchu&#39;)&quot; th:remove=&quot;${module_orderMgt_pldelete}&quot;&gt;批量删除&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot; onclick=&quot;getID(&#39;hedan&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_hborder}&quot;&gt;合并订单&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;onclick=&quot;getID(&#39;printTHOrder&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_thprint}&quot;&gt;提货打印&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;onclick=&quot;getID(&#39;printOrder&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_printorder}&quot;&gt;打印订单&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;button class=&quot;btn btn-info&quot; type=&quot;button&quot; &nbsp;onclick=&quot;getID(&#39;toException&#39;)&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;th:remove=&quot;${module_orderMgt_yccl}&quot;&gt;异常处理&lt;/button&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/div&gt;</p>
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>public</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;String index(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">HttpServletRequest</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">request</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">ModelMap</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">) {</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">UserDto</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">user</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;= getUserDto(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">request</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Long </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">userId</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;= </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">user</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.getUserId();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.put(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module_orderMgt_pldelete&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">permissionService</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.hasPermission(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module:orderMgt:pldelete&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">userId</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.put(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module_orderMgt_hborder&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">permissionService</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.hasPermission(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module:orderMgt:hborder&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">userId</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.put(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module_orderMgt_thprint&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">permissionService</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.hasPermission(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module:orderMgt:thprint&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">userId</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.put(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module_orderMgt_printorder&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">permissionService</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.hasPermission(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module:orderMgt:printorder&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">userId</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.put(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module_orderMgt_yccl&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">permissionService</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.hasPermission(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;module:orderMgt:yccl&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">userId</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">prefix</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">+ </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;/index&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:justify"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+					</ul>
+					<ul>
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">div</span></span>
+							</span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;form-control-static col-sm-offset-6&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;button&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">onclick</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot; $.table.search();&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;btn btn-info&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000"><span style="font-family:Consolas">查询</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;btn btn-info&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;button&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">onclick</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getID(&#39;shanchu&#39;)&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">th:remove</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;${module_orderMgt_pldelete}&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000"><span style="font-family:Consolas">批量删除</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;btn btn-info&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;button&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">onclick</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getID(&#39;hedan&#39;)&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">th:remove</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;${module_orderMgt_hborder}&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000"><span style="font-family:Consolas">合并订单</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;btn btn-info&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;button&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">onclick</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getID(&#39;printTHOrder&#39;)&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">th:remove</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;${module_orderMgt_thprint}&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000"><span style="font-family:Consolas">提货打印</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;btn btn-info&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;button&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">onclick</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getID(&#39;printOrder&#39;)&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">th:remove</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;${module_orderMgt_printorder}&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000"><span style="font-family:Consolas">打印订单</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">class</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;btn btn-info&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;button&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">onclick</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getID(&#39;toException&#39;)&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#7f007f">th:remove</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;${module_orderMgt_yccl}&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#000000"><span style="font-family:Consolas">异常处理</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">button</span></span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+						<p style="text-align:justify"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:10.5000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">div</span></span>
+							</span>
+							</span><span style="font-size:10.5000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
 						<p>判断权限，按钮是否显示</p>
 					</ul>
 					<ul>
 						<h3>方法二</h3>
-						<p>@GetMapping(&quot;/printTHTiao&quot;)<br /> &nbsp;&nbsp; &nbsp;public String printTHTiao(String ids, ModelMap mmap) {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mmap.addAttribute(&quot;ids&quot;, ids);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return prefix + &quot;/pickUpPrint&quot;;<br /> &nbsp;&nbsp; &nbsp;}</p>
-						<p>&lt;input id=&quot;ids&quot; name=&quot;ids&quot; &nbsp;type=&quot;hidden&quot; &nbsp;th:value=&quot;${#httpServletRequest.getAttribute(&#39;ids&#39;)}&quot; /&gt;</p>
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#646464">@GetMapping</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">(</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;/printTHTiao&quot;</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">)</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>public</strong></span></span>
+							</span>
+							</strong>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">String</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;printTHTiao(String </span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">ids</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, ModelMap </span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">) {</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">mmap</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">.addAttribute(</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;ids&quot;</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">ids</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">prefix</span></span>
+							</span>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">+ </span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff">&quot;/pickUpPrint&quot;</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:justify"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">input</span></span>
+							</span>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">id</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;ids&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">name</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;ids&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">type</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;hidden&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">th:value</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;${#httpServletRequest.getAttribute(&#39;ids&#39;)}&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#008080">/&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
 
 					</ul>
 					<!--article end-->

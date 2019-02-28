@@ -54,21 +54,461 @@
 					</ul>
 					<ul>
 						<h3>myBatis存在就更新不存在就插入</h3>
-						<p>&lt;insert id=&quot;SaveObPackinglist&quot; parameterType=&quot;ObPackinglist&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;insert into ewms_ob_packinglist<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;trim prefix=&quot;(&quot; suffix=&quot;)&quot; suffixOverrides=&quot;,&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;boxLineId != null and boxLineId != &#39;&#39; &quot;&gt;box_line_id,&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;boxId != null and boxId != &#39;&#39; &quot;&gt;box_id,&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;instiId != null and instiId != &#39;&#39; &quot;&gt;insti_id,&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;appId != null and appId != &#39;&#39; &quot;&gt;app_id,&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/trim&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;trim prefix=&quot;values (&quot; suffix=&quot;)&quot; suffixOverrides=&quot;,&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;boxLineId != null and boxLineId != &#39;&#39;&quot;&gt;#{boxLineId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;boxId != null and boxId != &#39;&#39;&quot;&gt;#{boxId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;instiId != null and instiId != &#39;&#39;&quot;&gt;#{instiId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;appId != null and appId != &#39;&#39;&quot;&gt;#{appId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/trim&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;ON DUPLICATE KEY UPDATE<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;trim prefix=&quot;&quot; suffixOverrides=&quot;,&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;boxId != null &nbsp;and boxId != &#39;&#39; &nbsp;&quot;&gt;box_id = #{boxId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;instiId != null &nbsp;and instiId != &#39;&#39; &nbsp;&quot;&gt;insti_id = #{instiId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;appId != null &nbsp;and appId != &#39;&#39; &nbsp;&quot;&gt;app_id = #{appId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;if test=&quot;subAppId != null &nbsp;and subAppId != &#39;&#39; &nbsp;&quot;&gt;sub_app_id = #{subAppId},&lt;/if&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/trim&gt;<br /> &nbsp;&nbsp; &nbsp;&lt;/insert&gt;</p>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">insert</span></span>
+							</span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">id</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;SaveObPackinglist&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">parameterType</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;ObPackinglist&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insert into ewms_ob_packinglist</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">trim</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">prefix</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;(&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">suffix</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;)&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">suffixOverrides</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxLineId != null and boxLineId != &#39;&#39; &quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">box_line_id,</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxId != null and boxId != &#39;&#39; &quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">box_id,</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;instiId != null and instiId != &#39;&#39; &quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">insti_id,</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;appId != null and appId != &#39;&#39; &quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">app_id,</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">trim</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">trim</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">prefix</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;values (&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">suffix</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;)&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">suffixOverrides</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxLineId != null and boxLineId != &#39;&#39;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">#{boxLineId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxId != null and boxId != &#39;&#39;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">#{boxId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;instiId != null and instiId != &#39;&#39;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">#{instiId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;appId != null and appId != &#39;&#39;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">#{appId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">trim</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON DUPLICATE KEY UPDATE</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">trim</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">prefix</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">suffixOverrides</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxId != null &nbsp;and boxId != &#39;&#39; &nbsp;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">box_id = #{boxId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;instiId != null &nbsp;and instiId != &#39;&#39; &nbsp;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">insti_id = #{instiId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;appId != null &nbsp;and appId != &#39;&#39; &nbsp;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">app_id = #{appId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;subAppId != null &nbsp;and subAppId != &#39;&#39; &nbsp;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">sub_app_id = #{subAppId},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">trim</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">insert</span></span>
+							</span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
 					</ul>
 					<ul>
 						<h3>myBatis存在就更新不存在就插入——调用</h3>
-						<p>public int SaveObPackinglist(ObPackinglist obPackinglist2);</p>
+						<p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>public</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>int</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;SaveObPackinglist(</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">ObPackinglist</span></span>
+							</span>&nbsp;<span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">obPackinglist2</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">)</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
 					</ul>
 					<!--article end-->
 					<ul>
 						<h3>myBatis传入数组参数</h3>
-						<p>&lt;delete id=&quot;deleteObPackinglistByIds&quot; parameterType=&quot;String&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;delete from ewms_ob_packinglist where box_line_id in<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;foreach item=&quot;boxLineId&quot; collection=&quot;array&quot; open=&quot;(&quot;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;separator=&quot;,&quot; close=&quot;)&quot;&gt;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#{boxLineId}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/foreach&gt;<br /> &nbsp;&nbsp; &nbsp;&lt;/delete&gt;</p>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">delete</span></span>
+							</span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">id</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;deleteObPackinglistByIds&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">parameterType</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;String&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete from ewms_ob_packinglist where box_line_id in</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">item</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxLineId&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">collection</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;array&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">open</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;(&quot;</em></span>
+							</span>
+							</span>
+							</em>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">separator</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">close</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;)&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{boxLineId}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">delete</span></span>
+							</span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
 
 					</ul>
 					<ul>
 						<h3>myBatis传入数组参数</h3>
-						<p>public int deleteObPackinglistByIds(String[] boxLineIds);</p>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>public</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#7f0055"><strong>int</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;deleteObPackinglistByIds(String[] </span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#6a3e3e">boxLineIds</span></span>
+							</span><span style="font-size:12.0000pt"><span style="font-family:Consolas"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
 					</ul>
 					<!--article begin-->
 					<ul>

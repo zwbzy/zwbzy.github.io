@@ -51,8 +51,1420 @@
 				<div class="bloglist">
 					<!--article begin-->
 					<ul>
-						<h1>jvm类加载机制及静态变量初始化</h1>
-						</br>
+						<h3>jQuery-Validate通用校验方法</h3>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">/*this is basic form validation using for validation person&#39;s basic information author:Clara </span></span>
+							</span><u><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f"><u>Guo</u></span>
+							</span>
+							</span>
+							</u><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">&nbsp;data:2017/07/20*/</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">$(document).ready(</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">$.validator.setDefaults({ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;submitHandler: </span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(form) { &nbsp;&nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp; <span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">form.submit(); &nbsp;&nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}); &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//手机号码验证身份证正则合并：(^\d{15}$)|(^\d{17}([0-9]|X)$)</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isPhone&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;length = value.length;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;phone=</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^1[3|4|5|7|8][0-9]\d{8}$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element)||(length == 11 &amp;&amp; phone.test(value));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请填写正确的11位手机号&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//电话号码验证</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isTel&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;tel = </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^(0\d{2,3}-)?\d{7,8}$/g</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//区号3,4位,号码7,8位</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element) || (tel.test(value));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请填写正确的座机号码&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//姓名校验</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isName&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;name=</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^[\u4e00-\u9fa5]{2,6}$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element) || (name.test(value));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;姓名只能用汉字,长度2-4位&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验用户名</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isUserName&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;userName=</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^[a-zA-Z0-9]{2,13}$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element) || (userName).test(value);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;请输入数字或者字母,不包含特殊字符&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left">&nbsp;</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验身份证</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isIdentity&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;id= </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^(\d{15}$|^\d{18}$|^\d{17}(\d|X))$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element) || (id.test(value));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请输入正确的15或18位身份证号,末尾为大写X&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验出生日期</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isBirth&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;birth = </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^(19|20)\d{2}-(1[0-2]|0?[1-9])-(0?[1-9]|[1-2][0-9]|3[0-1])$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element) || (birth).test(value);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;出生日期格式示例2000-01-01&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//邮政编码验证 &nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isZipCode&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element) { &nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;tel = </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^[0-9]{6}$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element) || (tel.test(value));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请正确填写您的邮政编码&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//手机号或座机号验证 &nbsp;&nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isPhoneOrTel&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(value,element) {</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;length = value.length;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;phone=</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^1[3|4|5|7|8][0-9]\d{8}$/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;tel = </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">/^(0\d{2,3}-)?\d{7,8}$/g</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//区号3,4位,号码7,8位</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>this</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">.optional(element)||(length == 11 &amp;&amp; phone.test(value))||(tel.test(value));</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请正确填写您的手机号或座机号&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验新旧密码是否相同</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;isdiff&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;p1=$(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;#pwdOld&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).val();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;p2=$(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;#pwdNew&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).val();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>if</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(p1==p2){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>false</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>else</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">});</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验新密码和确认密码是否相同</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">jQuery.validator.addMethod(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;issame&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;p3=$(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;#confirm_password&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).val();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;p4=$(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;#pwdNew&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).val();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>if</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(p3==p4){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>else</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>return</strong></span></span>
+							</span>
+							</strong>&nbsp;<strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>false</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">});</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验基础信息表单</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">$(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;#basicInfoForm&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).validate({</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">errorElement:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;span&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">errorClass:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;help-block error-mes&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">rules:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">name:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">isName:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">sex:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;required&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">birth:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;required&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">isPhone:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">email:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">email:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">messages:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">name:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请输入中文姓名&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">isName:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;姓名只能为汉字&quot;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">sex:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请输入性别&quot;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">birth:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请输入出生年月&quot;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请输入手机号&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">isPhone:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请填写正确的11位手机号&quot;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">email:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请输入邮箱&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">email:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;请填写正确的邮箱格式&quot;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left">&nbsp;</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">errorPlacement:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(error,element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">element.next().remove();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">element.closest(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;.gg-formGroup&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).append(error);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left">&nbsp;</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">highlight:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(element){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">$(element).closest(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;.gg-formGroup&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).addClass(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;has-error has-feedback&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">success:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(label){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>var</strong></span></span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;el = label.closest(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;.gg-formGroup&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).find(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;input&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">el.next().remove();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">label.closest(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;.gg-formGroup&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).removeClass(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;has-error&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).addClass(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;has-feedback has-success&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">label.remove();</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">submitHandler:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(form){</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">alert(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;保存成功!&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">});</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left">&nbsp;</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//校验修改密码表单</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">$(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;#modifyPwd&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).validate({</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">onfocusout: </span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(element) { $(element).valid()},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;debug:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>false</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//表示校验通过后是否直接提交表单</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;onkeyup:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>false</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">, </span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//表示按键松开时候监听验证</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">rules:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">pwdOld:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">required:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">minlength:6</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pwdNew:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;required:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;minlength:6,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;isdiff:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#3f7f5f">//issame:true,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">confirm_password:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;required:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;minlength:6,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;issame:</span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>true</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;</span></span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">messages:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp; <span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">pwdOld : {</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;必填&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;minlength:$.validator.format(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;密码长度要大于6&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">)</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">pwdNew:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;必填&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;minlength:$.validator.format(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;密码长度要大于6&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">),</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;isdiff:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;原密码与新密码不能重复&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;</span></span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">confirm_password:{</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;required:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;必填&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;minlength:$.validator.format(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;密码长度要大于6&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">),</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">&nbsp;&nbsp;&nbsp;issame:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;新密码要与确认新密码一致&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left">&nbsp;</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">},</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">errorElement:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;mes&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">errorClass:</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&quot;gg-star&quot;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">,</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">errorPlacement: </span></span>
+							</span><strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#7f0055"><strong>function</strong></span>
+							</span>
+							</span>
+							</strong><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">(error, element) </span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">{ </span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">element.closest(</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#2a00ff">&#39;.gg-formGroup&#39;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">).append(error);</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left">&nbsp;</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">}</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">});</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:微软雅黑"><span style="color:#000000">});</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
 
 					</ul>
 					<!--article end-->
@@ -116,7 +1528,9 @@
 				</ul>
 				<h2><p>友情链接</p></h2>
 				<ul class="news">
-					<li><a href="">她的博客</a></li>
+					<li>
+						<a href="">她的博客</a>
+					</li>
 				</ul>
 			</aside>
 		</article>

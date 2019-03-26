@@ -406,27 +406,46 @@
 					</ul>
 					<!--article end-->
 					<ul>
-						<h3>myBatis传入数组参数</h3>
-						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
-							</span><span style="font-size:9.0000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">delete</span></span>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf">&lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,</span></span>
+							</span><u><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf"><u>Dao</u></span>
 							</span>
+							</span>
+							</u><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf"><span style="font-family:Consolas">接口中参数名字随意</span> --&gt;</span>
+							</span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">select</span></span>
 							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">id</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
-							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;deleteObPackinglistByIds&quot;</em></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getEmployeesListParams&quot;</em></span>
 							</span>
 							</span>
-							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">parameterType</span></span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">resultType</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
-							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;String&quot;</em></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;Employees&quot;</em></span>
 							</span>
 							</span>
 							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * &nbsp;</span></span>
 							</span>
 							</span>
 							</span>
 						</p>
 
-						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete from ewms_ob_packinglist where box_line_id in</span></span>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from EMPLOYEES e &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where e.EMPLOYEE_ID in &nbsp;</span></span>
 							</span>
 							</span>
 							</span>
@@ -434,29 +453,28 @@
 
 						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
-							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">item</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">collection</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
-							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;boxLineId&quot;</em></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;list&quot;</em></span>
 							</span>
 							</span>
-							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">collection</span></span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">item</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
-							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;array&quot;</em></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;employeeId&quot;</em></span>
 							</span>
 							</span>
-							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">open</span></span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">index</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
-							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;(&quot;</em></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;index&quot;</em></span>
 							</span>
 							</span>
-							</em>
-							</span>
+							</em>&nbsp;&nbsp;</span>
 							</span>
 						</p>
 
-						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">separator</span></span>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">open</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
-							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;(&quot;</em></span>
 							</span>
 							</span>
 							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">close</span></span>
@@ -464,13 +482,17 @@
 							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;)&quot;</em></span>
 							</span>
 							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">separator</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
 							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
-							</span>
-							</span>
+							</span>&nbsp;&nbsp;</span>
 							</span>
 						</p>
 
-						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{boxLineId}</span></span>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{employeeId} &nbsp;</span></span>
 							</span>
 							</span>
 							</span>
@@ -479,17 +501,290 @@
 						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">select</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;</span></span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf">&lt;!--Array:forech中的collection属性类型是array,collection的值必须是:list,item的值可以随意,</span></span>
+							</span><u><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf"><u>Dao</u></span>
+							</span>
+							</span>
+							</u><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf"><span style="font-family:Consolas">接口中参数名字随意</span> --&gt;</span>
+							</span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">select</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">id</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getEmployeesArrayParams&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">resultType</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;Employees&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * &nbsp;</span></span>
 							</span>
 							</span>
 							</span>
 						</p>
 
-						<p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
-							</span><span style="font-size:9.0000pt"><span style="background-color:#c0c0c0"><span style="font-family:Consolas"><span style="color:#3f7f7f">delete</span></span>
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from EMPLOYEES e &nbsp;</span></span>
 							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where e.EMPLOYEE_ID in &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">collection</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;array&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">item</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;employeeId&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">index</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;index&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">open</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;(&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">close</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;)&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">separator</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{employeeId} &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
 							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">select</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;</span></span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf">&lt;!--Map:不单单</span></span>
+							</span><u><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf"><u>forech</u></span>
 							</span>
 							</span>
+							</u><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f5fbf"><span style="font-family:Consolas">中的</span>collection属性是map.key,其它所有属性都是map.key,比如下面的departmentId --&gt;</span>
+							</span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">select</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">id</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;getEmployeesMapParams&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">resultType</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;Employees&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select * &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from EMPLOYEES e &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">where</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;departmentId!=null and departmentId!=&#39;&#39;&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.DEPARTMENT_ID=#{departmentId} &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">test</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;employeeIdsArray!=null and employeeIdsArray.length!=0&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND e.EMPLOYEE_ID in &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
+							</span>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">collection</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;employeeIdsArray&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">item</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;employeeId&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">index</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;index&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">open</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;(&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">close</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;)&quot;</em></span>
+							</span>
+							</span>
+							</em>&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#7f007f">separator</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">=</span></span>
+							</span><em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#2a00ff"><em>&quot;,&quot;</em></span>
+							</span>
+							</span>
+							</em><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;"><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#{employeeId} &nbsp;</span></span>
+							</span>
+							</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">foreach</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">if</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:left"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">where</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;&nbsp;</span>
+							</span>
+						</p>
+
+						<p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&lt;/</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#3f7f7f">select</span></span>
+							</span><span style="font-size:9.0000pt"><span style="font-family:Consolas"><span style="color:#008080">&gt;</span></span>
+							</span>&nbsp;</span>
 							</span>
 						</p>
 
